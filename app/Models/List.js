@@ -1,4 +1,4 @@
-import { generateId } from "../Utils/GenerateId.js"
+import { generateId } from "../Utils/generateId.js"
 
 export class List {
     constructor({ name, color, id }) {
