@@ -42,6 +42,11 @@
   box-sizing: border-box;
 }
 
+.double {
+  zoom: 1.25;
+  transform: scale(2);
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;

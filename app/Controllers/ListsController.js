@@ -26,9 +26,9 @@ function _draw() {
     tasks.forEach(t2 => {
       template += `
                 <li class="card-text p-1 d-flex justify-content-between">
-                  <input onclick="app.todosController.done('${t2.id}')" class="align-self-center" type="checkbox" ${t2.done ? 'checked' : ''}>
+                  <input onclick="app.todosController.done('${t2.id}')" class="align-self-center double" type="checkbox" ${t2.done ? 'checked' : ''}>
                   <p class="px-2 text-center" style="${t2.done ? 'text-decoration: line-through;' : ''}">${t2.task}</p>
-                  <button title="delete task" class="btn btn-danger" onclick="app.todosController.deleteTodo('${t2.id}')"><i class="fa fa-times" aria-hidden="true"></i></button>
+                  <button title="delete task" class="btn btn-transparent" onclick="app.todosController.deleteTodo('${t2.id}')"><i class="fa fa-times fa-lg text-danger" aria-hidden="true"></i></button>
                 </li>
                 `
     })
@@ -37,7 +37,8 @@ function _draw() {
           <form onsubmit="app.todosController.addTodo(event,'${l.id}')">
             <div class="d-flex p-3">
                 <input type="text" name="task" placeholder="Add Task..." minlength="3" maxlength="50" required>
-                <button title="add task" class="btn btn-transparent">+</button>
+                <button title="add task" class="btn btn-transparent"><i class="fa fa-plus-square fa-lg text-success" aria-hidden="true"></i>
+                </button>
             </div>
           </form>
       </div>
